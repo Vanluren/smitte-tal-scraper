@@ -8,7 +8,9 @@
   "private": true,
   "scripts": {
     "start": "nodemon --exec babel-node src/index --ignore db.json",
-    "deploy": "pm2 start src/index.js --name smitte-scraper --watch --log log.log"
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "clean && babel src -d dist",
+    "deploy": "pm2 start dist/index.js --name smitte-scraper --watch --log log.log"
   },
   "dependencies": {
     "express": "^4.17.1",
