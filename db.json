@@ -1,5 +1,7 @@
 {
   "lastUpdate": "2020-03-11T17:24:34+01:00",
+  "currentlyInfected": "442",
+  "currentlyQuarantined": "1.303",
   "infected": [
     {
       "date": "2020-03-11T17:24:34+01:00",

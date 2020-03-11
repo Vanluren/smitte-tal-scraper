@@ -59,10 +59,18 @@ const _saveNumbers = object => {
     db.get("infected")
       .push({ date: object.date, ...object.infected })
       .write();
+
+    db.get("currentlyInfected")
+      .push(object.infected.amount)
+      .write();
   }
   if (!isNewQuarantineCount) {
     db.get("quarantined")
       .push({ date: object.date, ...object.quarantined })
+      .write();
+
+    db.get("currentlyQuarantined")
+      .push(object.infected.amount)
       .write();
   }
 };

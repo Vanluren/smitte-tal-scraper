@@ -7,8 +7,24 @@ const port = process.env.PORT || 1337;
 const app = express();
 
 app.get("/", (req, res, next) => {
-  const { lastUpdate, infected, quarantined } = db.value();
-  res.status(200).json({ lastUpdate, infected, quarantined });
+  const { lastUpdate, currentlyInfected, currentlyQuarantined } = db.value();
+  return res
+    .status(200)
+    .json({ lastUpdate, currentlyInfected, currentlyQuarantined });
+});
+
+app.get("/data", (_, res) => {
+  return res.status(200).json(db.value());
+});
+
+app.get("/infected", (_, res) => {
+  const { infected } = db.value();
+  return res.status(200).json({ infected });
+});
+
+app.get("/quarantined", (_, res) => {
+  const { quarantined } = db.value();
+  return res.status(200).json({ quarantined });
 });
 
 app.get("/scrape", (_req, res) =>
