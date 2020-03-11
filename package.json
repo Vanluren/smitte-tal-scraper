@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec babel-node src/index --ignore db.json"
+    "start": "nodemon --exec babel-node src/index --ignore db.json",
+    "deploy": ""
   },
   "dependencies": {
     "express": "^4.17.1",
