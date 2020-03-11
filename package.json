@@ -1,0 +1,36 @@
+{
+  "name": "smitte-tal-scraper",
+  "version": "0.0.1",
+  "description": "Scrapping server for smittetal.dk",
+  "main": "index.js",
+  "author": "VANLUREN.XYZ",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index --ignore db.json"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "lowdb": "^1.0.0",
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "cheerio": "^1.0.0-rc.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "puppeteer": "^2.1.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
