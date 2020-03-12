@@ -64,6 +64,7 @@ const _saveNumbers = object => {
       .push(object.infected.amount)
       .write();
   }
+
   if (!isNewQuarantineCount) {
     db.get("quarantined")
       .push({ date: object.date, ...object.quarantined })
@@ -73,6 +74,12 @@ const _saveNumbers = object => {
       .push(object.infected.amount)
       .write();
   }
+  db.get("scrapedData")
+    .push({ ...object })
+    .write();
+  db.get("lastUpdate")
+    .push(moment().format())
+    .write();
 };
 
 export const fetchAndSaveNumbers = () => {
