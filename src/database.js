@@ -2,7 +2,7 @@ import lowdb from "lowdb";
 import FileSync from "lowdb/adapters/FileSync";
 
 let DB_PATH = "db.json";
-if (process.NODE_ENV === production) {
+if (process.NODE_ENV === "production") {
   DB_PATH = "prod_db.json";
 }
 
