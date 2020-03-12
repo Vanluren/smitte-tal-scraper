@@ -10,7 +10,7 @@
     "start": "nodemon --exec babel-node src/index --ignore db.json",
     "clean": "rm -rf dist && mkdir dist",
     "build": "yarn clean && babel src -d dist",
-    "deploy": "yarn build && pm2 start dist/index.js --name smitte-tal-server --log log.log"
+    "deploy": "yarn build && NODE_ENV=production pm2 start dist/index.js --name smitte-tal-server --log log.log"
   },
   "dependencies": {
     "express": "^4.17.1",
