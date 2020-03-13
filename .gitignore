@@ -1,3 +1,7 @@
+#Project specific 
+prod_db.json
+
+#other stuff
 .cache/
 coverage/
 dist/*
@@ -24,3 +28,6 @@ npm-debug.log
 package-lock.json
 yarn-lock.json
 test/*.log
+
+
+
