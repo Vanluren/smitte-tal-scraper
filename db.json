@@ -1,20 +1,57 @@
 {
-  "lastUpdate": "2020-03-11T17:24:34+01:00",
-  "currentlyInfected": "442",
-  "currentlyQuarantined": "1.303",
-  "infected": [
+  "lastCheck": "2020-03-15T15:54:34+01:00",
+  "currentlyInfected": "864",
+  "allScrapedData": [
     {
-      "date": "2020-03-11T17:24:34+01:00",
-      "updated": "2020-03-11T17:00:00+01:00",
-      "amount": "442"
+      "date": "2020-03-15T15:43:44+01:00",
+      "infected": "864",
+      "newCases": "+28",
+      "deaths": "2",
+      "newDeaths": "+1",
+      "recovered": "1",
+      "activeCases": "861",
+      "criticalCases": ""
+    },
+    {
+      "date": "2020-03-15T15:48:30+01:00",
+      "infected": "864",
+      "newCases": "+28",
+      "deaths": "2",
+      "newDeaths": "+1",
+      "recovered": "1",
+      "activeCases": "861",
+      "criticalCases": ""
+    },
+    {
+      "date": "2020-03-15T15:51:03+01:00",
+      "infected": "864",
+      "newCases": "+28",
+      "deaths": "2",
+      "newDeaths": "+1",
+      "recovered": "1",
+      "activeCases": "861",
+      "criticalCases": ""
+    },
+    {
+      "date": "2020-03-15T15:51:11+01:00",
+      "infected": "864",
+      "newCases": "+28",
+      "deaths": "2",
+      "newDeaths": "+1",
+      "recovered": "1",
+      "activeCases": "861",
+      "criticalCases": ""
+    },
+    {
+      "date": "2020-03-15T15:54:34+01:00",
+      "infected": "864",
+      "newCases": "+28",
+      "deaths": "2",
+      "newDeaths": "+1",
+      "recovered": "1",
+      "activeCases": "861",
+      "criticalCases": ""
     }
   ],
-  "quarantined": [
-    {
-      "date": "2020-03-11T17:24:34+01:00",
-      "updated": "2020-03-11T17:00:00+01:00",
-      "amount": "1.303"
-    }
-  ]
+  "infectionData": []
 }
-

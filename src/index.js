@@ -1,16 +1,14 @@
 import express from "express";
-import { fetchAndSaveNumbers } from "./scraper";
-import db from "./database";
+import { fetchAndSaveNumbers } from "./scraper/scraper";
+import db from "./db/database";
 import "./cron";
 
 const port = process.env.PORT || 1337;
 const app = express();
 
-app.get("/", (req, res, next) => {
-  const { lastUpdate, currentlyInfected, currentlyQuarantined } = db.value();
-  return res
-    .status(200)
-    .json({ lastUpdate, currentlyInfected, currentlyQuarantined });
+app.get("/", (_, res) => {
+  const { lastCheck, currentlyInfected } = db.value();
+  return res.status(200).json({ lastCheck, currentlyInfected });
 });
 
 app.get("/data", (_, res) => {
@@ -22,14 +20,9 @@ app.get("/infected", (_, res) => {
   return res.status(200).json({ infected });
 });
 
-app.get("/quarantined", (_, res) => {
-  const { quarantined } = db.value();
-  return res.status(200).json({ quarantined });
-});
-
-app.get("/scrape", (_req, res) =>
+app.get("/scrape", (_, res) =>
   fetchAndSaveNumbers()
-    .then(() => res.status(200))
+    .then(() => res.status(200).json(db.value()))
     .catch(err => res.status(500).send({ error: err }))
 );
 
