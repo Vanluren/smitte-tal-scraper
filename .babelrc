@@ -2,9 +2,5 @@
   "presets": [
     "@babel/preset-env"
   ],
-"plugins": [
-    ["transform-runtime", {
-      "regenerator": true
-    }]
-  ]
+"plugins": ["@babel/plugin-transform-runtime"]
 }
