@@ -30,7 +30,13 @@ deploy-production:
 	@echo "${GREEN}Deployed successfully.${COLOR_END}"
 
 deploy-staging:
-	@echo "${YELLOW}Deploying to staging environment...${COLOR_END}"
-	ssh -t ${DEPLOYMENT_USER_STAGING}@${DEPLOYMENT_IP_STAGING} 'cd ${DEPLOYMENT_PATH_STAGING}; git reset --hard; git clean -fd; git pull;'
+	@echo "${GREEN}Deploying to staging environment...${COLOR_END}"
+	ssh -t ${DEPLOYMENT_USER_STAGING}@${DEPLOYMENT_IP_STAGING} 
+	\ 'cd ${DEPLOYMENT_PATH_STAGING}; git reset --hard; git clean -fd; git pull;
+	\ echo Repo refreshed. Deploying...
+	\ yarn; 
+	\ pm2 stop ${PROJECT_TITLE}; pm2 delete ${PROJECT_TITLE};
+	\ yarn deploy;'
 	@echo "${GREEN}Deployed successfully.${COLOR_END}"
+
 
