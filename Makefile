@@ -21,9 +21,12 @@ test:
 
 deploy-production:
 	@echo "${YELLOW}Deploying to production environment...${COLOR_END}"
-	ssh -t ${DEPLOYMENT_USER_PRODUCTION}@${DEPLOYMENT_IP_PRODUCTION} 'cd ${DEPLOYMENT_PATH_PRODUCTION}; git reset --hard; git clean -fd; git pull;'
-	@echo "${GREEN}Repo refreshed.${COLOR_END}"
-	'yarn deploy'
+	ssh -t ${DEPLOYMENT_USER_PRODUCTION}@${DEPLOYMENT_IP_PRODUCTION} 
+	\ 'cd ${DEPLOYMENT_PATH_PRODUCTION}; git reset --hard; git clean -fd; git pull;
+	\ echo Repo refreshed. Deploying...
+	\ yarn; 
+	\ pm2 stop ${PROJECT_TITLE}; pm2 delete ${PROJECT_TITLE};
+	\ yarn deploy;'
 	@echo "${GREEN}Deployed successfully.${COLOR_END}"
 
 deploy-staging:
