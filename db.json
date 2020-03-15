@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2020-03-15T15:54:34+01:00",
+  "lastCheck": "2020-03-15T16:00:03+01:00",
   "currentlyInfected": "864",
   "allScrapedData": [
     {
@@ -44,6 +44,16 @@
     },
     {
       "date": "2020-03-15T15:54:34+01:00",
+      "infected": "864",
+      "newCases": "+28",
+      "deaths": "2",
+      "newDeaths": "+1",
+      "recovered": "1",
+      "activeCases": "861",
+      "criticalCases": ""
+    },
+    {
+      "date": "2020-03-15T16:00:03+01:00",
       "infected": "864",
       "newCases": "+28",
       "deaths": "2",
