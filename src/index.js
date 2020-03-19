@@ -16,8 +16,8 @@ app.get("/data", (_, res) => {
 });
 
 app.get("/infected", (_, res) => {
-  const { infected } = db.value();
-  return res.status(200).json({ infected });
+  const { currentlyInfected } = db.value();
+  return res.status(200).json({ currentlyInfected });
 });
 
 app.get("/scrape", (_, res) =>

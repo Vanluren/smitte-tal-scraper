@@ -1,6 +1,5 @@
 {
-  "lastCheck": "2020-03-15T16:00:03+01:00",
-  "currentlyInfected": "864",
+  "lastCheck": "2020-03-19T14:35:55+01:00",
   "allScrapedData": [
     {
       "date": "2020-03-15T15:43:44+01:00",
@@ -61,7 +60,22 @@
       "recovered": "1",
       "activeCases": "861",
       "criticalCases": ""
+    },
+    {
+      "date": "2020-03-19T14:32:04+01:00",
+      "criticalCases": ""
+    },
+    {
+      "date": "2020-03-19T14:35:55+01:00",
+      "infected": "1,132",
+      "newCases": "+75",
+      "deaths": "6",
+      "newDeaths": "+2",
+      "recovered": "1",
+      "activeCases": "1,125",
+      "criticalCases": ""
     }
   ],
-  "infectionData": []
+  "infectionData": [],
+  "currentlyInfected": "1,132"
 }

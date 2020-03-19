@@ -13,7 +13,7 @@ const _fetchPage = () =>
 const _getDkFromCountriesTable = page => {
   const $ = cheerio.load(page);
 
-  return $("#main_table_countries>tbody>tr>td")
+  return $("#main_table_countries_today>tbody>tr>td")
     .filter((i, elem) => {
       return (
         $(elem)
@@ -43,7 +43,7 @@ const _parseDkRowToObj = rowData => {
   data.deaths = arr[3];
   data.newDeaths = arr[4];
   data.recovered = arr[5];
-  data.activeCases = arr[6];
+  data.criticalCases = arr[6];
 
   return data;
 };
